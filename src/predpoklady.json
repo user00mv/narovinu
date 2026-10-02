@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "nazev": "Orientační ceník a energetické předpoklady",
+    "poznamka": "Ukázkové hodnoty pro prototyp (2026, vč. DPH 12 % u bytové výstavby). Před spuštěním je nahradí ceník NA ROVINU. Upravují se v administraci, ne v kódu."
+  },
+  "cenik": {
+    "fasada":          { "nazev": "Zateplení fasády, ETICS 200 mm vč. lešení a omítky", "jednotka": "m2", "cena": 3200 },
+    "strecha":         { "nazev": "Zateplení střechy vč. souvisejících prací", "jednotka": "m2", "cena": 3800 },
+    "strop":           { "nazev": "Zateplení stropu pod půdou, 300 mm", "jednotka": "m2", "cena": 950 },
+    "podlaha-zemina":  { "nazev": "Zateplení podlahy na terénu vč. nové skladby", "jednotka": "m2", "cena": 4200 },
+    "podlaha-sklep":   { "nazev": "Zateplení stropu sklepa zespodu", "jednotka": "m2", "cena": 1200 },
+    "podlaha-venk":    { "nazev": "Zateplení podlahy nad venkovním prostorem", "jednotka": "m2", "cena": 2600 },
+    "okna-plast":      { "nazev": "Plastová okna, trojsklo, vč. montáže a parapetů", "jednotka": "m2", "cena": 11000 },
+    "okna-drevo":      { "nazev": "Dřevěná a dřevohliníková okna vč. montáže", "jednotka": "m2", "cena": 15500 },
+    "okna-hlinik":     { "nazev": "Hliníková okna vč. montáže", "jednotka": "m2", "cena": 17000 },
+    "dvere":           { "nazev": "Vchodové dveře vč. montáže", "jednotka": "ks", "cena": 48000, "plochaKs": 2.2 },
+    "stineni":         { "nazev": "Venkovní žaluzie vč. motoru", "jednotka": "m2", "cena": 7500 },
+    "tc-vzduch-voda":  { "nazev": "Tepelné čerpadlo vzduch-voda vč. instalace", "jednotka": "ks", "cena": 330000 },
+    "tc-zeme-voda":    { "nazev": "Tepelné čerpadlo země-voda vč. vrtů", "jednotka": "ks", "cena": 520000 },
+    "tc-vzduch-vzduch":{ "nazev": "Tepelné čerpadlo vzduch-vzduch pro celý dům", "jednotka": "ks", "cena": 170000 },
+    "podlahove":       { "nazev": "Nové podlahové topení", "jednotka": "m2", "cena": 1500 },
+    "fve-kwp":         { "nazev": "Fotovoltaika vč. střídače a montáže", "jednotka": "kWp", "cena": 24000 },
+    "fve-kwh":         { "nazev": "Bateriové úložiště", "jednotka": "kWh", "cena": 11000 },
+    "fve-rizeni":      { "nazev": "Energetický management", "jednotka": "ks", "cena": 25000 },
+    "wallbox":         { "nazev": "Wallbox 11 kW vč. instalace", "jednotka": "ks", "cena": 32000 },
+    "reku-centralni":  { "nazev": "Centrální rekuperace vč. rozvodů", "jednotka": "ks", "cena": 230000 },
+    "reku-decentralni":{ "nazev": "Decentrální rekuperační jednotky", "jednotka": "ks", "cena": 140000 },
+    "elektro-kompletni":{ "nazev": "Nové rozvody elektroinstalace v celém domě", "jednotka": "m2", "cena": 1500 },
+    "elektro-rozvadec":{ "nazev": "Nový rozvaděč a výchozí revize", "jednotka": "ks", "cena": 55000 },
+    "elektro-smart":   { "nazev": "Příprava a základ smart home", "jednotka": "ks", "cena": 60000 },
+    "tuv-solar":       { "nazev": "Solární ohřev vody", "jednotka": "ks", "cena": 110000 },
+    "tuv-tc":          { "nazev": "Tepelné čerpadlo pro ohřev vody", "jednotka": "ks", "cena": 75000 },
+    "zelena":          { "nazev": "Zelená střecha", "jednotka": "m2", "cena": 2800 },
+    "destovka":        { "nazev": "Systém na dešťovou vodu", "jednotka": "ks", "cena": 95000 },
+    "priprava-dilci":  { "nazev": "Renovační pas, zpráva a administrace NZÚ", "jednotka": "ks", "cena": 12000 },
+    "priprava-komplexni":{ "nazev": "Projektová dokumentace, energetické hodnocení, PENB, administrace", "jednotka": "ks", "cena": 65000 }
+  },
+  "energie": {
+    "ceny": { "elektrina": 5.8, "elektrina-tc": 4.3, "elektrina-akumulace": 4.6, "plyn": 2.4, "uhli": 1.6, "drevo": 1.1, "jine": 2.6, "vykup": 1.0 },
+    "ucinnost": { "plyn": 0.92, "elektrina": 0.98, "uhli": 0.65, "drevo": 0.75, "tc": 2.8, "jine": 0.85 },
+    "scop": { "tc-vzduch-voda": 3.2, "tc-zeme-voda": 4.1, "tc-vzduch-vzduch": 3.4, "tuv-tc": 2.7 },
+    "potreba": [ { "do": 1959, "kwhm2": 210 }, { "do": 1989, "kwhm2": 175 }, { "do": 2001, "kwhm2": 130 }, { "do": 2012, "kwhm2": 95 }, { "do": 9999, "kwhm2": 60 } ],
+    "stavKoef": { "puvodni": 1.0, "castecne": 0.8, "zatepleny": 0.6 },
+    "efektDleStavu": { "puvodni": 1.0, "castecne": 0.7, "zatepleny": 0.35 },
+    "uspory": { "fasada": 0.30, "strecha": 0.15, "strop": 0.12, "okna": 0.13, "podlaha": 0.07, "reku": 0.12, "stineni": 0.01 },
+    "tuvKwh": 3500,
+    "zakladniElektrina": 3200,
+    "rekuSpotreba": 450,
+    "fveVynos": 1000,
+    "fveVlastniZaklad": 0.30, "fveVlastniBaterie": 0.25, "fveVlastniRizeni": 0.05, "fveVlastniTc": 0.05, "fveVlastniMax": 0.75,
+    "solarPokryti": 0.55
+  }
+}

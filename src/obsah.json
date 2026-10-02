@@ -1,0 +1,1009 @@
+{
+  "firma": {
+    "nazev": "NA ROVINU",
+    "telefon": "+420 XXX XXX XXX",
+    "email": "info@narovinu.cz",
+    "sidlo": "Doplní klient",
+    "ico": "Doplní klient"
+  },
+  "divize": [
+    {
+      "key": "okna",
+      "nazev": "OKNA",
+      "akcent": "#8AA4B5",
+      "headline": "Okna, která patří k domu.",
+      "veta": "Okna, dveře a stínění vybíráme podle domu a jeho vytápění. Montujeme je do roviny izolace, aby netvořila tepelný most.",
+      "cta": "Okna na rovinu",
+      "subdomena": "okna.narovinu.cz",
+      "cesta": "/okna",
+      "kalkulace": [
+        "okna"
+      ],
+      "oblasti": [
+        {
+          "slug": "vymena-oken",
+          "nazev": "Okna",
+          "lead": "Výměna oken včetně ostění, parapetů a napojení na fasádu. Pro NZÚ platí Uw nejvýše 0,90 W/m²K.",
+          "nzu": [
+            "VYPLNE"
+          ],
+          "calc": "okna"
+        },
+        {
+          "slug": "vchodove-dvere",
+          "nazev": "Dveře",
+          "lead": "Vchodové dveře s ohledem na tepelný most v prahu a na zabezpečení. Pro NZÚ platí UD nejvýše 1,2 W/m²K.",
+          "nzu": [
+            "VYPLNE"
+          ],
+          "calc": "okna"
+        },
+        {
+          "slug": "venkovni-stineni",
+          "nazev": "Stínění",
+          "lead": "Venkovní žaluzie a rolety zastaví letní slunce dřív, než ohřeje interiér.",
+          "nzu": [
+            "STINENI"
+          ],
+          "calc": "okna"
+        },
+        {
+          "slug": "montaz-oken",
+          "nazev": "Montáž",
+          "lead": "Montáž do izolační roviny s parotěsnou a paropropustnou páskou podle navrženého detailu.",
+          "nzu": [],
+          "calc": "okna"
+        },
+        {
+          "slug": "servis-oken",
+          "nazev": "Servis",
+          "lead": "Seřízení kování, výměna těsnění a kontrola napojení oken po letech provozu.",
+          "nzu": [],
+          "calc": null
+        }
+      ],
+      "dalsi": [
+        {
+          "slug": "plastova-okna",
+          "nazev": "Plastová okna",
+          "lead": "Plastové profily s trojsklem pro většinu rodinných domů. Nejlepší poměr ceny a tepelných vlastností.",
+          "nzu": [
+            "VYPLNE"
+          ],
+          "calc": "okna"
+        },
+        {
+          "slug": "hlinikova-okna",
+          "nazev": "Hliníková okna",
+          "lead": "Hliníková okna a velké prosklené stěny s přerušeným tepelným mostem pro moderní architekturu.",
+          "nzu": [
+            "VYPLNE"
+          ],
+          "calc": "okna"
+        }
+      ],
+      "souvisi": [
+        {
+          "div": "stavby",
+          "slug": "zatepleni",
+          "proc": "Okno patří do roviny izolace. Při výměně oken je nejlepší chvíle vyřešit ostění a fasádu."
+        },
+        {
+          "div": "teplo",
+          "slug": "tepelna-cerpadla",
+          "proc": "S novými okny klesne tepelná ztráta domu. Nový zdroj tepla pak může být menší."
+        }
+      ],
+      "nzuText": "Nová okna a dveře lze financovat bezúročným úvěrem NZÚ až do 12 000 Kč za m² výplně. Venkovní stínění do 3 000 Kč za m², pokud se mění i okno.",
+      "foto": {
+        "src": "img/okna.webp",
+        "alt": "Montážník osazuje nové okno"
+      }
+    },
+    {
+      "key": "stavby",
+      "nazev": "STAVBY",
+      "akcent": "#B49E7F",
+      "headline": "Od rekonstrukce po nový dům.",
+      "veta": "Rekonstrukce, novostavby, fasády, zateplení i střechy vedeme jako jeden projekt s jedním rozpočtem a jedním stavbyvedoucím.",
+      "cta": "Stavby na rovinu",
+      "subdomena": "stavby.narovinu.cz",
+      "cesta": "/stavby",
+      "kalkulace": [
+        "fasada",
+        "strecha"
+      ],
+      "oblasti": [
+        {
+          "slug": "rekonstrukce-domu",
+          "nazev": "Rekonstrukce",
+          "lead": "Celková rekonstrukce rodinného domu podle jednoho projektu, rozpočtu a harmonogramu.",
+          "nzu": [
+            "ZAT-STENA",
+            "ZAT-STRECHA",
+            "VYPLNE"
+          ],
+          "calc": "komplet"
+        },
+        {
+          "slug": "novostavby",
+          "nazev": "Novostavby",
+          "lead": "Nový rodinný dům na klíč, včetně náhrady původního domu na stejném pozemku.",
+          "nzu": [],
+          "calc": null
+        },
+        {
+          "slug": "fasady",
+          "nazev": "Fasády",
+          "lead": "Nové fasády a opravy omítek, obkladů a soklů, samostatně nebo spolu se zateplením.",
+          "nzu": [
+            "ZAT-STENA"
+          ],
+          "calc": "fasada"
+        },
+        {
+          "slug": "zatepleni",
+          "nazev": "Zateplení",
+          "lead": "Zateplení fasády, střechy, stropu i podlahy s návrhem detailů bez tepelných mostů.",
+          "nzu": [
+            "ZAT-STENA",
+            "ZAT-STRECHA",
+            "ZAT-STROP",
+            "ZAT-ZEMINA"
+          ],
+          "calc": "fasada"
+        },
+        {
+          "slug": "strechy",
+          "nazev": "Střechy",
+          "lead": "Nové střechy a zateplení podkroví včetně klempířských prvků a střešních oken.",
+          "nzu": [
+            "ZAT-STRECHA"
+          ],
+          "calc": "strecha"
+        }
+      ],
+      "dalsi": [],
+      "souvisi": [
+        {
+          "div": "teplo",
+          "slug": "tepelna-cerpadla",
+          "proc": "Po zateplení stačí výrazně menší zdroj tepla. Čerpadlo navrhujeme až na novou tepelnou ztrátu."
+        },
+        {
+          "div": "energie",
+          "slug": "fotovoltaika",
+          "proc": "Novou střechu rovnou připravíme na fotovoltaiku, kotvení i kabelové prostupy."
+        }
+      ],
+      "nzuText": "Zateplení stěn a střechy lze financovat bezúročným úvěrem až 3 500 Kč za m², strop pod půdou 2 000 Kč za m², konstrukce k zemině 5 000 Kč za m². Komplexní renovace celé obálky má limit 2 000 000 Kč.",
+      "foto": {
+        "src": "img/stavby.webp",
+        "alt": "Lešení a izolační desky na fasádě během zateplení"
+      }
+    },
+    {
+      "key": "teplo",
+      "nazev": "TEPLO",
+      "akcent": "#E07B3C",
+      "headline": "Teplo podle vašeho domu.",
+      "veta": "Tepelné čerpadlo dimenzujeme podle výpočtu tepelné ztráty domu a podle otopné soustavy, kterou v domě máte.",
+      "cta": "Teplo na rovinu",
+      "subdomena": "teplo.narovinu.cz",
+      "cesta": "/teplo",
+      "kalkulace": [
+        "tc"
+      ],
+      "oblasti": [
+        {
+          "slug": "tepelna-cerpadla",
+          "nazev": "Tepelná čerpadla",
+          "lead": "Tepelné čerpadlo vzduch-voda nebo země-voda dimenzované podle tepelné ztráty domu.",
+          "nzu": [
+            "TC-VZ-VO",
+            "TC-ZEME",
+            "TC-VZ-VZ"
+          ],
+          "calc": "tc"
+        },
+        {
+          "slug": "podlahove-topeni",
+          "nazev": "Podlahové topení",
+          "lead": "Nízkoteplotní podlahové topení, se kterým tepelné čerpadlo pracuje nejúsporněji.",
+          "nzu": [],
+          "calc": "tc"
+        },
+        {
+          "slug": "ohrev-vody",
+          "nazev": "Ohřev vody",
+          "lead": "Ohřev vody tepelným čerpadlem, solárními kolektory nebo přebytky z fotovoltaiky.",
+          "nzu": [
+            "TUV-TC",
+            "TUV-SOL"
+          ],
+          "calc": "tuv"
+        },
+        {
+          "slug": "regulace",
+          "nazev": "Regulace",
+          "lead": "Ekvitermní regulace a zónové řízení, aby dům topil jen tam a tehdy, kdy je potřeba.",
+          "nzu": [],
+          "calc": null
+        },
+        {
+          "slug": "servis-tepelnych-cerpadel",
+          "nazev": "Servis",
+          "lead": "Pravidelné prohlídky, kontrola okruhu chladiva a nastavení topné křivky.",
+          "nzu": [],
+          "calc": null
+        }
+      ],
+      "dalsi": [],
+      "souvisi": [
+        {
+          "div": "stavby",
+          "slug": "zatepleni",
+          "proc": "Nejdřív obálka, potom zdroj. Menší tepelná ztráta znamená menší a levnější čerpadlo."
+        },
+        {
+          "div": "elektro",
+          "slug": "rozvadece",
+          "proc": "Tepelné čerpadlo potřebuje vlastní jištění a často nový rozvaděč."
+        },
+        {
+          "div": "energie",
+          "slug": "fotovoltaika",
+          "proc": "Čerpadlo je největší spotřebič v domě. Vlastní elektřina snižuje náklady na jeho provoz."
+        }
+      ],
+      "nzuText": "Tepelné čerpadlo vzduch-voda lze financovat bezúročným úvěrem až 350 000 Kč, země-voda až 400 000 Kč, vzduch-vzduch až 200 000 Kč. Ohřev vody až 100 000 Kč.",
+      "foto": {
+        "src": "img/teplo.webp",
+        "alt": "Venkovní jednotka tepelného čerpadla u rodinného domu"
+      }
+    },
+    {
+      "key": "energie",
+      "nazev": "ENERGIE",
+      "akcent": "#E3B54C",
+      "headline": "Energie, kterou využijete.",
+      "veta": "Fotovoltaiku, baterii a řízení spotřeby navrhujeme podle toho, kdy a kolik elektřiny dům skutečně spotřebuje.",
+      "cta": "Energie na rovinu",
+      "subdomena": "energie.narovinu.cz",
+      "cesta": "/energie",
+      "kalkulace": [
+        "fve"
+      ],
+      "oblasti": [
+        {
+          "slug": "fotovoltaika",
+          "nazev": "Fotovoltaika",
+          "lead": "Fotovoltaika od 3 kWp s třífázovým připojením, navržená podle spotřeby domu.",
+          "nzu": [
+            "FVE-KWP"
+          ],
+          "calc": "fve"
+        },
+        {
+          "slug": "baterie",
+          "nazev": "Baterie",
+          "lead": "Bateriové úložiště posune polední výrobu do večera, kdy dům spotřebovává nejvíc.",
+          "nzu": [
+            "FVE-BAT"
+          ],
+          "calc": "fve"
+        },
+        {
+          "slug": "energeticky-management",
+          "nazev": "Energetický management",
+          "lead": "Řízení, které posílá přebytky do bojleru, tepelného čerpadla nebo do auta.",
+          "nzu": [],
+          "calc": "fve"
+        },
+        {
+          "slug": "optimalizace-spotreby",
+          "nazev": "Optimalizace spotřeby",
+          "lead": "Rozbor spotřeby a nastavení tarifu podle toho, kdy dům elektřinu opravdu potřebuje.",
+          "nzu": [],
+          "calc": null
+        },
+        {
+          "slug": "zalohovani",
+          "nazev": "Zálohování",
+          "lead": "Záložní napájení při výpadku sítě pro oběhová čerpadla, lednici a internet.",
+          "nzu": [],
+          "calc": "fve"
+        }
+      ],
+      "dalsi": [],
+      "souvisi": [
+        {
+          "div": "elektro",
+          "slug": "rozvadece",
+          "proc": "Fotovoltaika s baterií potřebuje třífázovou přípojku a rozvaděč s rezervou."
+        },
+        {
+          "div": "teplo",
+          "slug": "ohrev-vody",
+          "proc": "Přebytky z fotovoltaiky nejlépe využije tepelné čerpadlo nebo ohřev vody."
+        }
+      ],
+      "nzuText": "Fotovoltaiku lze financovat bezúročným úvěrem až 25 000 Kč za kWp a baterii až 15 000 Kč za kWh, celkem nejvýše 400 000 Kč. Podmínkou je nový systém od 3 kWp a třífázové připojení.",
+      "foto": {
+        "src": "img/energie.webp",
+        "alt": "Montáž fotovoltaického panelu na střechu"
+      }
+    },
+    {
+      "key": "elektro",
+      "nazev": "ELEKTRO",
+      "akcent": "#5E89D8",
+      "headline": "Elektro připravené na budoucnost.",
+      "veta": "Nové rozvody a rozvaděč dimenzujeme rovnou na tepelné čerpadlo, fotovoltaiku, wallbox i chytrou domácnost.",
+      "cta": "Elektro na rovinu",
+      "subdomena": "elektro.narovinu.cz",
+      "cesta": "/elektro",
+      "kalkulace": [
+        "elektro"
+      ],
+      "oblasti": [
+        {
+          "slug": "rekonstrukce-elektroinstalace",
+          "nazev": "Elektroinstalace",
+          "lead": "Nové rozvody v celém domě a zásuvkové okruhy podle dnešní spotřeby.",
+          "nzu": [],
+          "calc": "elektro"
+        },
+        {
+          "slug": "rozvadece",
+          "nazev": "Rozvaděče",
+          "lead": "Nový rozvaděč s proudovými chrániči a rezervou pro tepelné čerpadlo, FVE i wallbox.",
+          "nzu": [],
+          "calc": "elektro"
+        },
+        {
+          "slug": "revize",
+          "nazev": "Revize",
+          "lead": "Výchozí a pravidelné revize elektroinstalace s revizní zprávou.",
+          "nzu": [],
+          "calc": null
+        },
+        {
+          "slug": "smart-home",
+          "nazev": "Smart home",
+          "lead": "Řízení světel, žaluzií a vytápění z jedné aplikace, připravené už v rozvodech.",
+          "nzu": [],
+          "calc": "elektro"
+        },
+        {
+          "slug": "wallbox",
+          "nazev": "Wallbox",
+          "lead": "Domácí nabíjení elektromobilu do 11 kW, ideálně z vlastní fotovoltaiky.",
+          "nzu": [],
+          "calc": "fve"
+        }
+      ],
+      "dalsi": [],
+      "souvisi": [
+        {
+          "div": "energie",
+          "slug": "fotovoltaika",
+          "proc": "Rozvaděč rovnou připravíme na fotovoltaiku a baterii, ať se nebourá dvakrát."
+        },
+        {
+          "div": "teplo",
+          "slug": "tepelna-cerpadla",
+          "proc": "Tepelné čerpadlo potřebuje samostatný okruh. Při nové elektroinstalaci ho připravíme."
+        }
+      ],
+      "nzuText": "Elektroinstalace, rozvaděče a revize do NZÚ nespadají. Wallbox lze zahrnout do způsobilých nákladů nové fotovoltaiky.",
+      "foto": {
+        "src": "img/elektro.webp",
+        "alt": "Elektrikář měří v rozvaděči"
+      }
+    }
+  ],
+  "proces": [
+    {
+      "nazev": "Poznáme váš dům",
+      "text": "Technik dům projde, změří a zapíše současný stav."
+    },
+    {
+      "nazev": "Navrhneme řešení",
+      "text": "Opatření seřadíme tak, aby na sebe technicky navazovala."
+    },
+    {
+      "nazev": "Spočítáme ekonomiku",
+      "text": "Investice, úspora a splátka v jedné tabulce."
+    },
+    {
+      "nazev": "Prověříme NZÚ a financování",
+      "text": "Renovační pas, žádost na SFŽP a podklady pro banku."
+    },
+    {
+      "nazev": "Připravíme projekt",
+      "text": "Projektová dokumentace, rozpočet a harmonogram."
+    },
+    {
+      "nazev": "Zrealizujeme",
+      "text": "Jeden stavbyvedoucí koordinuje všechny profese."
+    },
+    {
+      "nazev": "Předáme",
+      "text": "Revize, předávací protokol a dokumentace domu."
+    },
+    {
+      "nazev": "Zajistíme servis",
+      "text": "Okna, čerpadlo i fotovoltaika na jednom čísle."
+    }
+  ],
+  "rekonstrukce": [
+    {
+      "nazev": "Původní stav",
+      "text": "Prohlídka domu, zaměření, fotodokumentace a rozbor spotřeby energie.",
+      "vystup": "Zápis z technické prohlídky"
+    },
+    {
+      "nazev": "Návrh",
+      "text": "Pořadí opatření podle technické logiky domu: obálka, zdroj, energie, elektro.",
+      "vystup": "Renovační pas a návrh opatření"
+    },
+    {
+      "nazev": "Rozpočet",
+      "text": "Položkový rozpočet za celý dům, rozdělený po etapách.",
+      "vystup": "Rozpočet a orientační ekonomika"
+    },
+    {
+      "nazev": "NZÚ",
+      "text": "Ověříme, do které větve programu patříte, a připravíme žádost na SFŽP.",
+      "vystup": "Žádost o schválení projektu"
+    },
+    {
+      "nazev": "Financování",
+      "text": "Bezúročný úvěr NZÚ u zapojené banky, případně doplnění vlastních zdrojů.",
+      "vystup": "Podklady pro úvěrovou smlouvu"
+    },
+    {
+      "nazev": "Realizace",
+      "text": "Harmonogram, stavební deník a jeden stavbyvedoucí za celou stavbu.",
+      "vystup": "Týdenní report z realizace"
+    },
+    {
+      "nazev": "Revize",
+      "text": "Elektro, tlakové zkoušky, test těsnosti a nastavení technologií.",
+      "vystup": "Revizní zprávy a protokoly"
+    },
+    {
+      "nazev": "Předání",
+      "text": "Předání domu, doložení realizace pro NZÚ a návod k provozu.",
+      "vystup": "Předávací protokol a pas domu"
+    }
+  ],
+  "realizace": [
+    {
+      "id": "domazlice-1978",
+      "nazev": "Rekonstrukce domu z roku 1978",
+      "lokalita": "Domažlice",
+      "typy": [
+        "rekonstrukce",
+        "zatepleni",
+        "okna",
+        "tc",
+        "fve"
+      ],
+      "zadani": "Dům se starým plynovým kotlem, původními okny a nezateplenou fasádou. Majitelé chtěli nižší účty a jeden rozpočet za celou akci.",
+      "navrh": "Zateplení fasády a střechy, nová okna, tepelné čerpadlo dimenzované až na novou tepelnou ztrátu a fotovoltaika pro jeho provoz.",
+      "rozsah": [
+        "Zateplení fasády EPS 200 mm, 210 m²",
+        "Zateplení střechy, 160 m²",
+        "Okna s trojsklem, 24 m²",
+        "Tepelné čerpadlo vzduch-voda 9 kW",
+        "Fotovoltaika 7,2 kWp"
+      ],
+      "cena": 2480000,
+      "cas": "4 měsíce",
+      "technologie": [
+        "ETICS",
+        "trojsklo Uw 0,72",
+        "TČ vzduch-voda",
+        "FVE 7,2 kWp"
+      ],
+      "financovani": "Bezúročný úvěr NZÚ na dílčí opatření a vlastní zdroje.",
+      "vysledek": "Odhad nákladů na energie klesl z 5 100 na 1 700 Kč měsíčně.",
+      "roof": "gable",
+      "pred": {
+        "koure": true
+      },
+      "po": {
+        "fasada": true,
+        "strecha": true,
+        "okna": true,
+        "tc": true,
+        "fve": true
+      },
+      "foto": {
+        "src": "img/realizace-fve-dum.webp",
+        "alt": "Rodinný dům s fotovoltaikou na střeše"
+      },
+      "fotoPred": {
+        "src": "img/pred-vesnice.webp",
+        "alt": "Ilustrační foto domu před úpravami"
+      }
+    },
+    {
+      "id": "plzen-okna",
+      "nazev": "Výměna oken a vchodových dveří",
+      "lokalita": "Plzeň",
+      "typy": [
+        "okna"
+      ],
+      "zadani": "Původní dřevěná okna z 80. let profukovala a v létě se dům přehříval.",
+      "navrh": "Plastová okna s trojsklem montovaná do izolační roviny, nové vchodové dveře a venkovní žaluzie na jižní straně.",
+      "rozsah": [
+        "14 oken, 21 m²",
+        "Vchodové dveře UD 0,9",
+        "Venkovní žaluzie, 9 m²"
+      ],
+      "cena": 335000,
+      "cas": "3 týdny",
+      "technologie": [
+        "plast 6 komor",
+        "trojsklo",
+        "venkovní žaluzie"
+      ],
+      "financovani": "Bezúročný úvěr NZÚ na okna, dveře a stínění.",
+      "vysledek": "Těsný dům bez průvanu, v létě o několik stupňů chladnější interiér.",
+      "roof": "gable",
+      "pred": {
+        "koure": true
+      },
+      "po": {
+        "okna": true
+      },
+      "foto": {
+        "src": "img/okna-montaz.webp",
+        "alt": "Montáž nových oken"
+      },
+      "fotoPred": {
+        "src": "img/pred-fasada-1.webp",
+        "alt": "Ilustrační foto domu před úpravami"
+      }
+    },
+    {
+      "id": "klatovy-tc",
+      "nazev": "Tepelné čerpadlo místo plynového kotle",
+      "lokalita": "Klatovy",
+      "typy": [
+        "tc",
+        "elektro"
+      ],
+      "zadani": "Zateplený dům s dožívajícím plynovým kotlem a radiátory.",
+      "navrh": "Tepelné čerpadlo vzduch-voda s ohřevem vody a nový rozvaděč s rezervou pro budoucí fotovoltaiku.",
+      "rozsah": [
+        "TČ vzduch-voda 8 kW",
+        "Zásobník teplé vody 200 l",
+        "Nový rozvaděč a revize"
+      ],
+      "cena": 395000,
+      "cas": "2 týdny",
+      "technologie": [
+        "TČ vzduch-voda",
+        "ekvitermní regulace",
+        "rozvaděč s chrániči"
+      ],
+      "financovani": "Bezúročný úvěr NZÚ na tepelné čerpadlo, rozvaděč z vlastních zdrojů.",
+      "vysledek": "Odpadl stálý plat za plyn a dům topí levnějším tarifem.",
+      "roof": "flat",
+      "pred": {
+        "fasada": true,
+        "okna": true,
+        "koure": true
+      },
+      "po": {
+        "fasada": true,
+        "okna": true,
+        "tc": true,
+        "elektro": true
+      },
+      "foto": {
+        "src": "img/teplo-cerpadlo.webp",
+        "alt": "Tepelné čerpadlo před rodinným domem"
+      },
+      "fotoPred": {
+        "src": "img/pred-fasada-3.webp",
+        "alt": "Ilustrační foto domu před úpravami"
+      }
+    },
+    {
+      "id": "tachov-fve",
+      "nazev": "Fotovoltaika s baterií a wallboxem",
+      "lokalita": "Tachov",
+      "typy": [
+        "fve",
+        "elektro"
+      ],
+      "zadani": "Dům s tepelným čerpadlem a elektromobilem, vysoké účty za elektřinu.",
+      "navrh": "Fotovoltaika s baterií, energetický management a wallbox nabíjející z přebytků.",
+      "rozsah": [
+        "FVE 9,6 kWp",
+        "Baterie 10 kWh",
+        "Wallbox 11 kW",
+        "Energetický management"
+      ],
+      "cena": 430000,
+      "cas": "1 týden",
+      "technologie": [
+        "hybridní střídač",
+        "LFP baterie",
+        "wallbox 11 kW"
+      ],
+      "financovani": "Bezúročný úvěr NZÚ na FVE a baterii, wallbox v nákladech FVE.",
+      "vysledek": "Většina letní spotřeby pokrytá z vlastní výroby.",
+      "roof": "gable",
+      "pred": {
+        "fasada": true,
+        "okna": true,
+        "strecha": true,
+        "tc": true
+      },
+      "po": {
+        "fasada": true,
+        "okna": true,
+        "strecha": true,
+        "tc": true,
+        "fve": true,
+        "elektro": true
+      },
+      "foto": {
+        "src": "img/energie-strecha.webp",
+        "alt": "Fotovoltaika na střeše rodinného domu"
+      },
+      "fotoPred": {
+        "src": "img/pred-fasada-3.webp",
+        "alt": "Ilustrační foto domu před úpravami"
+      }
+    },
+    {
+      "id": "prestice-zatepleni",
+      "nazev": "Zateplení fasády a stropu",
+      "lokalita": "Přeštice",
+      "typy": [
+        "zatepleni"
+      ],
+      "zadani": "Dům z 60. let s chladnými stěnami a plísní v rozích místností.",
+      "navrh": "Kontaktní zateplení fasády s minerální vatou a foukaná izolace stropu pod půdou.",
+      "rozsah": [
+        "Fasáda MW 180 mm, 190 m²",
+        "Strop pod půdou 300 mm, 95 m²"
+      ],
+      "cena": 700000,
+      "cas": "6 týdnů",
+      "technologie": [
+        "ETICS minerální vata",
+        "foukaná celulóza"
+      ],
+      "financovani": "Bezúročný úvěr NZÚ na dílčí opatření.",
+      "vysledek": "Teplé stěny bez kondenzace a nižší spotřeba plynu.",
+      "roof": "gable",
+      "pred": {
+        "koure": true
+      },
+      "po": {
+        "fasada": true,
+        "strecha": true,
+        "koure": true
+      },
+      "foto": {
+        "src": "img/stavby.webp",
+        "alt": "Zateplení fasády s lešením"
+      },
+      "fotoPred": {
+        "src": "img/pred-fasada-2.webp",
+        "alt": "Ilustrační foto domu před úpravami"
+      }
+    },
+    {
+      "id": "horsovsky-tyn-elektro",
+      "nazev": "Nová elektroinstalace v domě z 60. let",
+      "lokalita": "Horšovský Týn",
+      "typy": [
+        "elektro"
+      ],
+      "zadani": "Hliníkové rozvody, starý rozvaděč s pojistkami a plán na tepelné čerpadlo.",
+      "navrh": "Kompletní nové rozvody, rozvaděč s rezervou pro TČ a FVE a příprava na chytré řízení.",
+      "rozsah": [
+        "Nové rozvody, 150 m² obytné plochy",
+        "Rozvaděč s chrániči",
+        "Příprava smart home",
+        "Výchozí revize"
+      ],
+      "cena": 290000,
+      "cas": "3 týdny",
+      "technologie": [
+        "měděné vodiče",
+        "proudové chrániče",
+        "sběrnice pro smart home"
+      ],
+      "financovani": "Vlastní zdroje. Elektroinstalace do NZÚ nespadá.",
+      "vysledek": "Bezpečná instalace připravená na další etapy rekonstrukce.",
+      "roof": "gable",
+      "pred": {
+        "koure": true
+      },
+      "po": {
+        "elektro": true,
+        "koure": true
+      },
+      "foto": {
+        "src": "img/elektro-rozvadec.webp",
+        "alt": "Nový rozvaděč s jističi"
+      },
+      "fotoPred": {
+        "src": "img/pred-fasada-1.webp",
+        "alt": "Ilustrační foto domu před úpravami"
+      }
+    },
+    {
+      "id": "stod-novostavba",
+      "nazev": "Novostavba na místě původního domu",
+      "lokalita": "Stod",
+      "typy": [
+        "novostavby",
+        "tc",
+        "fve"
+      ],
+      "zadani": "Původní dům nešlo ekonomicky opravit. Rodina chtěla nový dům na stejném pozemku.",
+      "navrh": "Nový přízemní dům s tepelným čerpadlem země-voda, rekuperací a fotovoltaikou.",
+      "rozsah": [
+        "Novostavba 135 m²",
+        "TČ země-voda 6 kW",
+        "Centrální rekuperace",
+        "FVE 8 kWp"
+      ],
+      "cena": 7900000,
+      "cas": "11 měsíců",
+      "technologie": [
+        "TČ země-voda",
+        "rekuperace",
+        "FVE"
+      ],
+      "financovani": "Hypotéka a bezúročný úvěr NZÚ v rámci komplexního opatření.",
+      "vysledek": "Dům s velmi nízkou spotřebou energie na místě původní stavby.",
+      "roof": "flat",
+      "pred": {
+        "koure": true
+      },
+      "po": {
+        "fasada": true,
+        "okna": true,
+        "strecha": true,
+        "tc": true,
+        "fve": true
+      },
+      "foto": {
+        "src": "img/novostavba.webp",
+        "alt": "Nový rodinný dům"
+      },
+      "fotoPred": {
+        "src": "img/dum-pred.webp",
+        "alt": "Ilustrační foto domu před úpravami"
+      }
+    }
+  ],
+  "filtry": [
+    {
+      "key": "vse",
+      "nazev": "Vše"
+    },
+    {
+      "key": "rekonstrukce",
+      "nazev": "Rekonstrukce"
+    },
+    {
+      "key": "okna",
+      "nazev": "Okna"
+    },
+    {
+      "key": "fve",
+      "nazev": "FVE"
+    },
+    {
+      "key": "tc",
+      "nazev": "TČ"
+    },
+    {
+      "key": "zatepleni",
+      "nazev": "Zateplení"
+    },
+    {
+      "key": "elektro",
+      "nazev": "Elektro"
+    },
+    {
+      "key": "novostavby",
+      "nazev": "Novostavby"
+    }
+  ],
+  "poradna": [
+    {
+      "slug": "nzu-2026-bezurocny-uver",
+      "tema": "NZÚ",
+      "nazev": "NZÚ 2026: místo dotace bezúročný úvěr",
+      "cteni": "4 min",
+      "perex": "Od 28. 5. 2026 dostanou běžné domácnosti na renovaci rodinného domu bezúročný úvěr. Přímá dotace zůstala jen v NZÚ Light.",
+      "telo": [
+        "Nová zelená úsporám pro rodinné domy se v roce 2026 změnila. Většina majitelů domů už nedostane peníze na účet po dokončení prací. Místo toho si půjčí u zapojené banky nebo stavební spořitelny a Státní fond životního prostředí za ně zaplatí úroky i další náklady, které by jinak vstupovaly do RPSN.",
+        "Prakticky to znamená, že splácíte jen jistinu. Pokud si půjčíte 600 000 Kč, vrátíte 600 000 Kč. Úvěr do 500 000 Kč je bez úroků až 10 let, vyšší úvěr až 15 let. U zajištěného úvěru na komplexní renovaci a domácnosti do 4. příjmového decilu až 25 let.",
+        "Limity jsou dva. Na dílčí opatření, například jen okna nebo tepelné čerpadlo, nejvýše 750 000 Kč na dům. Na komplexní renovaci celé obálky domu nejvýše 2 000 000 Kč. Minimální vypočtená výše úvěru pro podání žádosti je 100 000 Kč.",
+        "Fond projekt schvaluje, ale úvěr poskytuje banka. Ta posuzuje bonitu domácnosti a může úvěr snížit nebo neposkytnout. Proto v kalkulaci vždy ukazujeme i vlastní zdroje a měsíční splátku.",
+        "Přímá dotace zůstala v programu NZÚ Light pro nízkopříjmové domácnosti: až 250 000 Kč na zateplení a až 150 000 Kč na zdroje energie."
+      ]
+    },
+    {
+      "slug": "dilci-nebo-komplexni-renovace",
+      "tema": "Bezúročné financování",
+      "nazev": "Dílčí, nebo komplexní renovace?",
+      "cteni": "3 min",
+      "perex": "Rozdíl mezi 750 000 Kč a 2 000 000 Kč bezúročného úvěru často dělá jediné opatření navíc.",
+      "telo": [
+        "Dílčí opatření znamená, že řešíte jen část domu. Žádostí můžete podat víc, celkový součet úvěrů na dílčí opatření ale nesmí přesáhnout 750 000 Kč na dům. Další žádost lze podat až po dokončení a vyúčtování té předchozí.",
+        "Komplexní opatření je celkové zateplení obálky domu: fasáda, střecha nebo strop, okna a podlaha. Nejpozději při dokončení musí být v domě alespoň jeden obnovitelný zdroj, například tepelné čerpadlo, solární ohřev vody nebo fotovoltaika. Na jeden dům lze podat jen jednu žádost o komplexní opatření.",
+        "Komplexní renovace potřebuje projektovou dokumentaci a energetické hodnocení. Dům musí po renovaci snížit dodanou i neobnovitelnou primární energii alespoň o 30 %.",
+        "Pokud plánujete většinu obálky, spočítejte si obě varianty. Kalkulačka vám ukáže, kolik byste čerpali v každém režimu."
+      ]
+    },
+    {
+      "slug": "poradi-praci-pri-rekonstrukci",
+      "tema": "Rekonstrukce",
+      "nazev": "Pořadí prací: nejdřív obálka, potom zdroj",
+      "cteni": "3 min",
+      "perex": "Tepelné čerpadlo navržené pro nezateplený dům bude po zateplení předimenzované. Pořadí prací rozhoduje o ceně.",
+      "telo": [
+        "Dům je jeden systém. Tepelná ztráta určuje, jak velký zdroj tepla potřebujete. Když nejdřív koupíte tepelné čerpadlo a za dva roky zateplíte, máte stroj, který je pro dům zbytečně velký a pracuje méně efektivně.",
+        "Rozumné pořadí je obvykle: okna a zateplení, potom zdroj tepla, potom fotovoltaika a nakonec doladění řízení. Elektroinstalaci a rozvaděč je dobré vyřešit dřív, než přijde tepelné čerpadlo a fotovoltaika.",
+        "Pořadí opatření v NZÚ popisuje Renovační pas. Pokud plánujete etapy, pas určí, co má smysl udělat nejdřív a co může počkat."
+      ]
+    },
+    {
+      "slug": "okna-uw-090",
+      "tema": "Okna",
+      "nazev": "Co znamená Uw 0,90 u oken",
+      "cteni": "2 min",
+      "perex": "Součinitel prostupu tepla celého okna. Čím nižší číslo, tím méně tepla oknem uteče.",
+      "telo": [
+        "Hodnota Uw udává, kolik wattů tepla projde jedním metrem čtverečním okna při rozdílu teplot jednoho stupně. Zahrnuje rám i zasklení. Pro bezúročný úvěr NZÚ musí mít okna a balkonové dveře Uw nejvýše 0,90 W/m²K, střešní okna nejvýše 1,0 a vstupní dveře UD nejvýše 1,2.",
+        "Kvalitní okno s trojsklem dosahuje hodnot kolem 0,7. Stejně důležitá jako okno je ale montáž. Okno osazené mimo rovinu izolace nebo bez správných pásek vytvoří tepelný most, kde se může srážet vlhkost."
+      ]
+    },
+    {
+      "slug": "tepelne-cerpadlo-do-starsiho-domu",
+      "tema": "Tepelná čerpadla",
+      "nazev": "Tepelné čerpadlo do staršího domu",
+      "cteni": "3 min",
+      "perex": "Funguje i s radiátory. Rozhoduje teplota, kterou dům v mrazu potřebuje.",
+      "telo": [
+        "Tepelné čerpadlo pracuje nejúsporněji při nízké teplotě topné vody. Podlahové topení stačí ohřát na zhruba 35 °C, starší radiátory často potřebují víc. Čím vyšší teplota, tím nižší účinnost.",
+        "Proto začínáme výpočtem tepelné ztráty a kontrolou radiátorů. Někdy stačí vyměnit dva nebo tři poddimenzované radiátory, jindy je lepší nejdřív zateplit strop a vyměnit okna.",
+        "Pro bezúročný úvěr NZÚ musí jít o hlavní zdroj tepla v domě dokončeném před 1. 1. 2023. Limit je 350 000 Kč pro systém vzduch-voda a 400 000 Kč pro země-voda."
+      ]
+    },
+    {
+      "slug": "fotovoltaika-vlastni-spotreba",
+      "tema": "FVE",
+      "nazev": "Kolik elektřiny z fotovoltaiky spotřebujete doma",
+      "cteni": "3 min",
+      "perex": "Bez baterie a řízení spotřebuje běžný dům zhruba třetinu výroby. Zbytek prodá levně do sítě.",
+      "telo": [
+        "Fotovoltaika vyrábí hlavně kolem poledne, kdy je dům často prázdný. Bez baterie a řízení proto doma využijete jen část výroby a zbytek prodáte za výkupní cenu, která bývá výrazně nižší než cena nakupované elektřiny.",
+        "Baterie posune výrobu do večera, energetický management pošle přebytky do bojleru, tepelného čerpadla nebo auta. Teprve s tím se z fotovoltaiky stává úspora.",
+        "Pro bezúročný úvěr NZÚ musí mít systém alespoň 3 kWp a třífázové připojení. Baterii lze financovat jen spolu s novou fotovoltaikou."
+      ]
+    },
+    {
+      "slug": "revize-elektroinstalace",
+      "tema": "Elektro",
+      "nazev": "Revize elektroinstalace v rodinném domě",
+      "cteni": "2 min",
+      "perex": "Výchozí revize patří ke každé nové instalaci. U starších domů ukáže, jestli rozvody unesou nové spotřebiče.",
+      "telo": [
+        "Revizní technik zkontroluje stav rozvodů, jištění a ochranu před úrazem a výsledek zapíše do revizní zprávy. Po každé nové instalaci nebo rekonstrukci rozvodů se dělá výchozí revize.",
+        "U domů s hliníkovými rozvody nebo starým rozvaděčem doporučujeme revizi před instalací tepelného čerpadla, fotovoltaiky nebo wallboxu. Tyto spotřebiče výrazně zvyšují zatížení instalace."
+      ]
+    },
+    {
+      "slug": "kde-dum-ztraci-teplo",
+      "tema": "Provozní náklady domu",
+      "nazev": "Kde dům ztrácí teplo",
+      "cteni": "2 min",
+      "perex": "Nezateplený dům ztrácí nejvíc teplo stěnami a střechou. Okna jsou menší plocha, ale velký podíl na ztrátě.",
+      "telo": [
+        "U typického nezatepleného domu připadá na obvodové stěny zhruba třetina tepelné ztráty, na střechu nebo strop pod půdou další výrazný podíl, zbytek na okna, podlahu a větrání.",
+        "Nejlevnější úsporou bývá zateplení stropu pod nevytápěnou půdou. Největší úsporu přináší fasáda. Konkrétní čísla pro váš dům určí energetický specialista v Renovačním pasu."
+      ]
+    }
+  ],
+  "hero": {
+    "pred": {
+      "src": "img/dum-pred.webp",
+      "alt": "Starší rodinný dům před rekonstrukcí"
+    },
+    "po": {
+      "src": "img/dum-po.webp",
+      "alt": "Zateplený rodinný dům s fotovoltaikou na střeše"
+    }
+  },
+  "fotoZdroje": {
+    "poznamka": "Ilustrační fotografie z Pexels (licence Pexels: bezplatné komerční použití bez nutnosti uvádět autora). Před spuštěním je nahradí fotografie skutečných realizací NA ROVINU.",
+    "licence": "https://www.pexels.com/license/",
+    "polozky": [
+      {
+        "soubor": "dum-po",
+        "url": "https://www.pexels.com/photo/39761843/"
+      },
+      {
+        "soubor": "dum-pred",
+        "url": "https://www.pexels.com/photo/18301272/"
+      },
+      {
+        "soubor": "okna",
+        "url": "https://www.pexels.com/photo/5691531/"
+      },
+      {
+        "soubor": "okna-montaz",
+        "url": "https://www.pexels.com/photo/5691544/"
+      },
+      {
+        "soubor": "stavby",
+        "url": "https://www.pexels.com/photo/5511085/"
+      },
+      {
+        "soubor": "teplo",
+        "url": "https://www.pexels.com/photo/38067300/"
+      },
+      {
+        "soubor": "teplo-cerpadlo",
+        "url": "https://www.pexels.com/photo/20046693/"
+      },
+      {
+        "soubor": "energie",
+        "url": "https://www.pexels.com/photo/9875418/"
+      },
+      {
+        "soubor": "energie-strecha",
+        "url": "https://www.pexels.com/photo/17762230/"
+      },
+      {
+        "soubor": "elektro",
+        "url": "https://www.pexels.com/photo/34054464/"
+      },
+      {
+        "soubor": "elektro-rozvadec",
+        "url": "https://www.pexels.com/photo/28950842/"
+      },
+      {
+        "soubor": "realizace-fve-dum",
+        "url": "https://www.pexels.com/photo/36388422/"
+      },
+      {
+        "soubor": "novostavba",
+        "url": "https://www.pexels.com/photo/39634958/"
+      },
+      {
+        "soubor": "pred-fasada-1",
+        "url": "https://www.pexels.com/photo/36936746/"
+      },
+      {
+        "soubor": "pred-fasada-2",
+        "url": "https://www.pexels.com/photo/29934187/"
+      },
+      {
+        "soubor": "pred-fasada-3",
+        "url": "https://www.pexels.com/photo/32083358/"
+      },
+      {
+        "soubor": "pred-vesnice",
+        "url": "https://www.pexels.com/photo/30405814/"
+      }
+    ]
+  }
+}

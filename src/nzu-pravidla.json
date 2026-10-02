@@ -1,0 +1,358 @@
+{
+  "meta": {
+    "nazev": "Pravidla NZÚ pro kalkulačku NA ROVINU",
+    "stavKe": "2026-10-01",
+    "poznamka": "Data odpovídají Závazným pokynům NZÚ 2026+ ve znění 1. aktualizace (verze 2), platné od 24. 6. 2026. V ostrém provozu se spravují v administraci. Kód kalkulačky čte pouze tuto strukturu."
+  },
+  "programy": [
+    {
+      "kod": "NZU-RD-UVER",
+      "nazev": "NZÚ Rodinné domy: bezúročný úvěr",
+      "typ": "uver",
+      "pro": "Vlastníci rodinných domů bez ohledu na příjem. Banka posuzuje bonitu.",
+      "zdroj": "Závazné pokyny pro žadatele a příjemce podpory: Bezúročný úvěr pro rodinné domy",
+      "odkaz": "https://novazelenausporam.cz/dokument/5114",
+      "verzeDokumentu": "verze 2 (1. aktualizace)",
+      "platnostOd": "2026-06-24",
+      "platnostDo": null
+    },
+    {
+      "kod": "NZU-LIGHT",
+      "nazev": "NZÚ Light: přímá dotace",
+      "typ": "dotace",
+      "pro": "Domácnosti s dávkou jednotné sociální pomoci, nebo s příjmem do 3. decilu (u seniorů a osob s ID III. stupně do 5. decilu). Obálka domu ve třídě E až G.",
+      "zdroj": "Závazné pokyny pro žadatele a příjemce podpory NZÚ Light",
+      "odkaz": "https://novazelenausporam.cz/dokument/5113",
+      "verzeDokumentu": "verze 2 (1. aktualizace)",
+      "platnostOd": "2026-06-24",
+      "platnostDo": null
+    }
+  ],
+  "limity": [
+    { "kod": "UVER-MIN", "program": "NZU-RD-UVER", "nazev": "Minimální vypočtená výše úvěru pro podání žádosti", "hodnota": 100000, "jednotka": "Kč" },
+    { "kod": "UVER-MAX-DUM", "program": "NZU-RD-UVER", "nazev": "Maximální souhrnná výše úvěrů na jeden dům", "hodnota": 2000000, "jednotka": "Kč" },
+    { "kod": "UVER-MAX-DILCI", "program": "NZU-RD-UVER", "nazev": "Maximální součet úvěrů na dílčí opatření", "hodnota": 750000, "jednotka": "Kč" },
+    { "kod": "KOMP-HRANICE", "program": "NZU-RD-UVER", "nazev": "Hranice pro delší kompenzaci úroků", "hodnota": 500000, "jednotka": "Kč" },
+    { "kod": "KOMP-ZAKLAD", "program": "NZU-RD-UVER", "nazev": "Kompenzace úroků u úvěru do 500 000 Kč", "hodnota": 10, "jednotka": "let" },
+    { "kod": "KOMP-VYSSI", "program": "NZU-RD-UVER", "nazev": "Kompenzace úroků u úvěru nad 500 000 Kč", "hodnota": 15, "jednotka": "let" },
+    { "kod": "KOMP-KOMPLEX", "program": "NZU-RD-UVER", "nazev": "Kompenzace u zajištěného úvěru na komplexní renovaci, domácnost do 4. příjmového decilu", "hodnota": 25, "jednotka": "let" },
+    { "kod": "FVE-MAX", "program": "NZU-RD-UVER", "nazev": "Maximální úvěr na celou fotovoltaiku", "hodnota": 400000, "jednotka": "Kč" },
+    { "kod": "LIGHT-ZAT-MAX", "program": "NZU-LIGHT", "nazev": "Maximální dotace na zateplení", "hodnota": 250000, "jednotka": "Kč" },
+    { "kod": "LIGHT-ZDROJE-MAX", "program": "NZU-LIGHT", "nazev": "Maximální dotace na zdroje energie", "hodnota": 150000, "jednotka": "Kč" },
+    { "kod": "LIGHT-MIN", "program": "NZU-LIGHT", "nazev": "Minimální podpora v jedné žádosti", "hodnota": 50000, "jednotka": "Kč" },
+    { "kod": "LIGHT-UVER-KOMP", "program": "NZU-LIGHT", "nazev": "Doplňkový úvěr do výše dotace, kompenzace úroků", "hodnota": 10, "jednotka": "let" }
+  ],
+  "lhuty": [
+    { "nazev": "Uznatelné výdaje", "uver": "Nejvýše 12 měsíců před podáním žádosti", "light": "Nejvýše 12 měsíců před podáním žádosti" },
+    { "nazev": "Doložení dokončení realizace", "uver": "36 měsíců od rozhodnutí", "light": "24 měsíců od rozhodnutí" },
+    { "nazev": "Nejzazší termín dokončení", "uver": "31. 12. 2031", "light": "31. 12. 2031" },
+    { "nazev": "Doba udržitelnosti", "uver": "5 let", "light": "5 let" },
+    { "nazev": "Uzavření úvěrové smlouvy", "uver": "Do 12 měsíců od rozhodnutí", "light": "Podle podmínek úvěrové podpory" },
+    { "nazev": "Zahájení prací u dotace předem", "uver": "Neuplatní se", "light": "Do 6 měsíců od rozhodnutí" }
+  ],
+  "pravidla": [
+    {
+      "kod": "ZAT-STENA", "opatreni": "fasada", "program": "NZU-RD-UVER", "kategorie": "zatepleni",
+      "nazev": "Zateplení vnějších stěn", "typVypoctu": "jednotkova", "jednotka": "m2",
+      "jednotkovaPodpora": 3500, "maximum": null, "minimum": null, "bonus": null,
+      "kombinace": ["Kombinovatelné s ostatními opatřeními", "Venkovní stínění jen spolu s oknem nebo zateplením stěny"],
+      "omezeni": ["Dům dokončený před 1. 7. 2013", "U dílčího opatření jen stávající konstrukce, bez přístaveb a nástaveb"],
+      "podminky": { "dokoncenPred": 2013 },
+      "platnostOd": "2026-06-24", "platnostDo": null,
+      "zdroj": "Závazné pokyny Bezúročný úvěr RD", "odkaz": "https://novazelenausporam.cz/dokument/5114", "verzeDokumentu": "verze 2",
+      "poznamka": "Památkově chráněné konstrukce se zvláštními požadavky 5 000 Kč/m²."
+    },
+    {
+      "kod": "ZAT-STRECHA", "opatreni": "strecha", "program": "NZU-RD-UVER", "kategorie": "zatepleni",
+      "nazev": "Zateplení střechy", "typVypoctu": "jednotkova", "jednotka": "m2",
+      "jednotkovaPodpora": 3500, "maximum": null, "minimum": null, "bonus": null,
+      "kombinace": ["Kombinovatelné s ostatními opatřeními"],
+      "omezeni": ["Dům dokončený před 1. 7. 2013"],
+      "podminky": { "dokoncenPred": 2013 },
+      "platnostOd": "2026-06-24", "platnostDo": null,
+      "zdroj": "Závazné pokyny Bezúročný úvěr RD", "odkaz": "https://novazelenausporam.cz/dokument/5114", "verzeDokumentu": "verze 2",
+      "poznamka": "Stejná sazba jako vnější stěny a podlahy nad venkovním prostorem."
+    },
+    {
+      "kod": "ZAT-STROP", "opatreni": "strop", "program": "NZU-RD-UVER", "kategorie": "zatepleni",
+      "nazev": "Zateplení stropu pod nevytápěnou půdou", "typVypoctu": "jednotkova", "jednotka": "m2",
+      "jednotkovaPodpora": 2000, "maximum": null, "minimum": null, "bonus": null,
+      "kombinace": ["Kombinovatelné s ostatními opatřeními"],
+      "omezeni": ["Dům dokončený před 1. 7. 2013"],
+      "podminky": { "dokoncenPred": 2013 },
+      "platnostOd": "2026-06-24", "platnostDo": null,
+      "zdroj": "Závazné pokyny Bezúročný úvěr RD", "odkaz": "https://novazelenausporam.cz/dokument/5114", "verzeDokumentu": "verze 2",
+      "poznamka": "Platí i pro konstrukce k nevytápěným prostorům a k sousední budově."
+    },
+    {
+      "kod": "ZAT-ZEMINA", "opatreni": "podlaha-zemina", "program": "NZU-RD-UVER", "kategorie": "zatepleni",
+      "nazev": "Zateplení konstrukce k zemině", "typVypoctu": "jednotkova", "jednotka": "m2",
+      "jednotkovaPodpora": 5000, "maximum": null, "minimum": null, "bonus": null,
+      "kombinace": ["Kombinovatelné s ostatními opatřeními"],
+      "omezeni": ["Dům dokončený před 1. 7. 2013"],
+      "podminky": { "dokoncenPred": 2013 },
+      "platnostOd": "2026-06-24", "platnostDo": null,
+      "zdroj": "Závazné pokyny Bezúročný úvěr RD", "odkaz": "https://novazelenausporam.cz/dokument/5114", "verzeDokumentu": "verze 2",
+      "poznamka": ""
+    },
+    {
+      "kod": "ZAT-NEVYTAP", "opatreni": "podlaha-sklep", "program": "NZU-RD-UVER", "kategorie": "zatepleni",
+      "nazev": "Zateplení podlahy nad nevytápěným prostorem", "typVypoctu": "jednotkova", "jednotka": "m2",
+      "jednotkovaPodpora": 2000, "maximum": null, "minimum": null, "bonus": null,
+      "kombinace": ["Kombinovatelné s ostatními opatřeními"],
+      "omezeni": ["Dům dokončený před 1. 7. 2013"],
+      "podminky": { "dokoncenPred": 2013 },
+      "platnostOd": "2026-06-24", "platnostDo": null,
+      "zdroj": "Závazné pokyny Bezúročný úvěr RD", "odkaz": "https://novazelenausporam.cz/dokument/5114", "verzeDokumentu": "verze 2",
+      "poznamka": "Konstrukce k nevytápěným prostorům, například nad sklepem."
+    },
+    {
+      "kod": "ZAT-PODLAHA-VENK", "opatreni": "podlaha-venk", "program": "NZU-RD-UVER", "kategorie": "zatepleni",
+      "nazev": "Zateplení podlahy nad venkovním prostorem", "typVypoctu": "jednotkova", "jednotka": "m2",
+      "jednotkovaPodpora": 3500, "maximum": null, "minimum": null, "bonus": null,
+      "kombinace": ["Kombinovatelné s ostatními opatřeními"],
+      "omezeni": ["Dům dokončený před 1. 7. 2013"],
+      "podminky": { "dokoncenPred": 2013 },
+      "platnostOd": "2026-06-24", "platnostDo": null,
+      "zdroj": "Závazné pokyny Bezúročný úvěr RD", "odkaz": "https://novazelenausporam.cz/dokument/5114", "verzeDokumentu": "verze 2",
+      "poznamka": "Například podlaha nad průjezdem nebo arkýřem."
+    },
+    {
+      "kod": "VYPLNE", "opatreni": "okna", "program": "NZU-RD-UVER", "kategorie": "zatepleni",
+      "nazev": "Okna, balkonové dveře, střešní okna, vstupní dveře", "typVypoctu": "jednotkova", "jednotka": "m2",
+      "jednotkovaPodpora": 12000, "maximum": null, "minimum": null, "bonus": null,
+      "kombinace": ["Kombinovatelné s ostatními opatřeními"],
+      "omezeni": ["Dům dokončený před 1. 7. 2013", "Okna a balkonové dveře Uw nejvýše 0,90 W/m²K", "Střešní okna Uw nejvýše 1,0 W/m²K", "Vstupní dveře UD nejvýše 1,2 W/m²K"],
+      "podminky": { "dokoncenPred": 2013 },
+      "platnostOd": "2026-06-24", "platnostDo": null,
+      "zdroj": "Závazné pokyny Bezúročný úvěr RD", "odkaz": "https://novazelenausporam.cz/dokument/5114", "verzeDokumentu": "verze 2",
+      "poznamka": "Památkově chráněné výplně se zvláštními požadavky 18 000 Kč/m²."
+    },
+    {
+      "kod": "STINENI", "opatreni": "stineni", "program": "NZU-RD-UVER", "kategorie": "zatepleni",
+      "nazev": "Venkovní stínicí technika", "typVypoctu": "jednotkova", "jednotka": "m2",
+      "jednotkovaPodpora": 3000, "maximum": null, "minimum": null, "bonus": null,
+      "kombinace": ["Jen spolu s výměnou příslušného okna nebo se zateplením stěny, ve které okno je"],
+      "omezeni": ["Dům dokončený před 1. 7. 2013"],
+      "podminky": { "dokoncenPred": 2013, "vyzadujeJedno": ["okna", "fasada"] },
+      "platnostOd": "2026-06-24", "platnostDo": null,
+      "zdroj": "Závazné pokyny Bezúročný úvěr RD", "odkaz": "https://novazelenausporam.cz/dokument/5114", "verzeDokumentu": "verze 2",
+      "poznamka": ""
+    },
+    {
+      "kod": "TC-VZ-VO", "opatreni": "tc-vzduch-voda", "program": "NZU-RD-UVER", "kategorie": "zdroje",
+      "nazev": "Tepelné čerpadlo vzduch-voda", "typVypoctu": "pausal", "jednotka": "ks",
+      "jednotkovaPodpora": null, "maximum": 350000, "minimum": null, "bonus": null,
+      "kombinace": ["Kombinovatelné se zateplením, FVE a ohřevem vody"],
+      "omezeni": ["Dům dokončený před 1. 1. 2023", "Hlavní zdroj tepla, elektrický pohon, požadovaná účinnost", "Ne rozšíření stávajícího podporovaného zdroje"],
+      "podminky": { "dokoncenPred": 2023 },
+      "platnostOd": "2026-06-24", "platnostDo": null,
+      "zdroj": "Závazné pokyny Bezúročný úvěr RD", "odkaz": "https://novazelenausporam.cz/dokument/5114", "verzeDokumentu": "verze 2",
+      "poznamka": "U tepelných čerpadel může být vyžadován výpočet vhodnosti instalace."
+    },
+    {
+      "kod": "TC-ZEME", "opatreni": "tc-zeme-voda", "program": "NZU-RD-UVER", "kategorie": "zdroje",
+      "nazev": "Tepelné čerpadlo země-voda, voda-voda, hybridní", "typVypoctu": "pausal", "jednotka": "ks",
+      "jednotkovaPodpora": null, "maximum": 400000, "minimum": null, "bonus": null,
+      "kombinace": ["Kombinovatelné se zateplením, FVE a ohřevem vody"],
+      "omezeni": ["Dům dokončený před 1. 1. 2023", "Hlavní zdroj tepla, elektrický pohon, požadovaná účinnost"],
+      "podminky": { "dokoncenPred": 2023 },
+      "platnostOd": "2026-06-24", "platnostDo": null,
+      "zdroj": "Závazné pokyny Bezúročný úvěr RD", "odkaz": "https://novazelenausporam.cz/dokument/5114", "verzeDokumentu": "verze 2",
+      "poznamka": ""
+    },
+    {
+      "kod": "TC-VZ-VZ", "opatreni": "tc-vzduch-vzduch", "program": "NZU-RD-UVER", "kategorie": "zdroje",
+      "nazev": "Tepelné čerpadlo vzduch-vzduch", "typVypoctu": "pausal", "jednotka": "ks",
+      "jednotkovaPodpora": null, "maximum": 200000, "minimum": null, "bonus": null,
+      "kombinace": ["Kombinovatelné se zateplením a FVE"],
+      "omezeni": ["Dům dokončený před 1. 1. 2023", "Vytápění všech obytných místností"],
+      "podminky": { "dokoncenPred": 2023 },
+      "platnostOd": "2026-06-24", "platnostDo": null,
+      "zdroj": "Závazné pokyny Bezúročný úvěr RD", "odkaz": "https://novazelenausporam.cz/dokument/5114", "verzeDokumentu": "verze 2",
+      "poznamka": ""
+    },
+    {
+      "kod": "TUV-TC", "opatreni": "tuv-tc", "program": "NZU-RD-UVER", "kategorie": "zdroje",
+      "nazev": "Tepelné čerpadlo pro ohřev vody", "typVypoctu": "pausal", "jednotka": "ks",
+      "jednotkovaPodpora": null, "maximum": 100000, "minimum": null, "bonus": null,
+      "kombinace": ["Kombinovatelné se zateplením"],
+      "omezeni": ["Dům dokončený před 1. 1. 2023", "Elektrický pohon a požadovaná účinnost"],
+      "podminky": { "dokoncenPred": 2023 },
+      "platnostOd": "2026-06-24", "platnostDo": null,
+      "zdroj": "Závazné pokyny Bezúročný úvěr RD", "odkaz": "https://novazelenausporam.cz/dokument/5114", "verzeDokumentu": "verze 2",
+      "poznamka": ""
+    },
+    {
+      "kod": "TUV-SOL", "opatreni": "tuv-solar", "program": "NZU-RD-UVER", "kategorie": "zdroje",
+      "nazev": "Solární termický ohřev vody", "typVypoctu": "pausal", "jednotka": "ks",
+      "jednotkovaPodpora": null, "maximum": 100000, "minimum": null, "bonus": null,
+      "kombinace": ["Kombinovatelné se zateplením a zdrojem tepla"],
+      "omezeni": ["Dům dokončený před 1. 1. 2023", "Plocha kolektorů nejméně 1,8 m²", "Celoroční provoz a ochrana proti zamrznutí"],
+      "podminky": { "dokoncenPred": 2023 },
+      "platnostOd": "2026-06-24", "platnostDo": null,
+      "zdroj": "Závazné pokyny Bezúročný úvěr RD", "odkaz": "https://novazelenausporam.cz/dokument/5114", "verzeDokumentu": "verze 2",
+      "poznamka": ""
+    },
+    {
+      "kod": "FVE-KWP", "opatreni": "fve", "program": "NZU-RD-UVER", "kategorie": "zdroje",
+      "nazev": "Fotovoltaický systém, za 1 kWp", "typVypoctu": "jednotkova", "jednotka": "kWp",
+      "jednotkovaPodpora": 25000, "maximum": null, "minimum": 3, "bonus": null, "skupinaMax": "FVE-MAX",
+      "kombinace": ["Wallbox může být součástí způsobilých nákladů FVE"],
+      "omezeni": ["Dům dokončený před 1. 1. 2023", "Nejméně 3 kWp", "Třífázové připojení", "Jen nový systém, ne rozšíření stávající FVE"],
+      "podminky": { "dokoncenPred": 2023, "minKwp": 3, "trifaze": true },
+      "platnostOd": "2026-06-24", "platnostDo": null,
+      "zdroj": "Závazné pokyny Bezúročný úvěr RD", "odkaz": "https://novazelenausporam.cz/dokument/5114", "verzeDokumentu": "verze 2",
+      "poznamka": "Celá fotovoltaika nejvýše 400 000 Kč."
+    },
+    {
+      "kod": "FVE-BAT", "opatreni": "baterie", "program": "NZU-RD-UVER", "kategorie": "zdroje",
+      "nazev": "Bateriové úložiště, za 1 kWh", "typVypoctu": "jednotkova", "jednotka": "kWh",
+      "jednotkovaPodpora": 15000, "maximum": null, "minimum": null, "bonus": null, "skupinaMax": "FVE-MAX",
+      "kombinace": ["Jen jako součást nové FVE"],
+      "omezeni": ["Lithiové akumulátory", "Ne dodatečně ke stávající FVE"],
+      "podminky": { "dokoncenPred": 2023, "vyzadujeJedno": ["fve"] },
+      "platnostOd": "2026-06-24", "platnostDo": null,
+      "zdroj": "Závazné pokyny Bezúročný úvěr RD", "odkaz": "https://novazelenausporam.cz/dokument/5114", "verzeDokumentu": "verze 2",
+      "poznamka": ""
+    },
+    {
+      "kod": "REKU", "opatreni": "reku", "program": "NZU-RD-UVER", "kategorie": "zdroje",
+      "nazev": "Řízené větrání se zpětným získáváním tepla", "typVypoctu": "pausal", "jednotka": "ks",
+      "jednotkovaPodpora": null, "maximum": 200000, "minimum": null, "bonus": null,
+      "kombinace": ["Kombinovatelné se zateplením a zdroji"],
+      "omezeni": ["Větrání všech obytných místností", "Účinnost zpětného získávání tepla alespoň 75 %", "Zkouška těsnosti obálky (blower door test)"],
+      "podminky": {},
+      "platnostOd": "2026-06-24", "platnostDo": null,
+      "zdroj": "Závazné pokyny Bezúročný úvěr RD", "odkaz": "https://novazelenausporam.cz/dokument/5114", "verzeDokumentu": "verze 2",
+      "poznamka": ""
+    },
+    {
+      "kod": "ZELENA", "opatreni": "zelena", "program": "NZU-RD-UVER", "kategorie": "adaptace",
+      "nazev": "Zelená střecha", "typVypoctu": "jednotkova", "jednotka": "m2",
+      "jednotkovaPodpora": 2000, "maximum": 150000, "minimum": null, "bonus": null,
+      "kombinace": ["Jen v kombinaci se zateplením nebo podporovaným zdrojem energie"],
+      "omezeni": ["Vegetační souvrství zpravidla alespoň 75 mm", "Zálivka ne z veřejného vodovodu"],
+      "podminky": { "vyzadujeJedno": ["fasada", "strecha", "strop", "podlaha", "okna", "tc", "fve", "tuv"] },
+      "platnostOd": "2026-06-24", "platnostDo": null,
+      "zdroj": "Závazné pokyny Bezúročný úvěr RD", "odkaz": "https://novazelenausporam.cz/dokument/5114", "verzeDokumentu": "verze 2",
+      "poznamka": ""
+    },
+    {
+      "kod": "DESTOVKA", "opatreni": "destovka", "program": "NZU-RD-UVER", "kategorie": "adaptace",
+      "nazev": "Využití dešťové vody", "typVypoctu": "pausal", "jednotka": "ks",
+      "jednotkovaPodpora": null, "maximum": 100000, "minimum": null, "bonus": null,
+      "kombinace": ["Jen v kombinaci se zateplením nebo podporovaným zdrojem energie"],
+      "omezeni": ["Akumulační nádrž nejméně 2 m³"],
+      "podminky": { "vyzadujeJedno": ["fasada", "strecha", "strop", "podlaha", "okna", "tc", "fve", "tuv"] },
+      "platnostOd": "2026-06-24", "platnostDo": null,
+      "zdroj": "Závazné pokyny Bezúročný úvěr RD", "odkaz": "https://novazelenausporam.cz/dokument/5114", "verzeDokumentu": "verze 2",
+      "poznamka": ""
+    },
+
+    {
+      "kod": "L-ZAT-STENA", "opatreni": "fasada", "program": "NZU-LIGHT", "kategorie": "zatepleni",
+      "nazev": "Zateplení vnějších stěn", "typVypoctu": "jednotkova", "jednotka": "m2",
+      "jednotkovaPodpora": 2000, "maximum": null, "minimum": null, "bonus": null,
+      "kombinace": ["Součet zateplení nejvýše 250 000 Kč"], "omezeni": ["Dům dokončený před 1. 7. 2013"],
+      "podminky": { "dokoncenPred": 2013 }, "platnostOd": "2026-06-24", "platnostDo": null,
+      "zdroj": "Závazné pokyny NZÚ Light", "odkaz": "https://novazelenausporam.cz/dokument/5113", "verzeDokumentu": "verze 2", "poznamka": ""
+    },
+    {
+      "kod": "L-ZAT-STRECHA", "opatreni": "strecha", "program": "NZU-LIGHT", "kategorie": "zatepleni",
+      "nazev": "Zateplení střechy", "typVypoctu": "jednotkova", "jednotka": "m2",
+      "jednotkovaPodpora": 2000, "maximum": null, "minimum": null, "bonus": null,
+      "kombinace": ["Součet zateplení nejvýše 250 000 Kč"], "omezeni": ["Dům dokončený před 1. 7. 2013"],
+      "podminky": { "dokoncenPred": 2013 }, "platnostOd": "2026-06-24", "platnostDo": null,
+      "zdroj": "Závazné pokyny NZÚ Light", "odkaz": "https://novazelenausporam.cz/dokument/5113", "verzeDokumentu": "verze 2", "poznamka": ""
+    },
+    {
+      "kod": "L-ZAT-STROP", "opatreni": "strop", "program": "NZU-LIGHT", "kategorie": "zatepleni",
+      "nazev": "Zateplení stropu pod nevytápěnou půdou", "typVypoctu": "jednotkova", "jednotka": "m2",
+      "jednotkovaPodpora": 750, "maximum": null, "minimum": null, "bonus": null,
+      "kombinace": ["Součet zateplení nejvýše 250 000 Kč"], "omezeni": ["Dům dokončený před 1. 7. 2013"],
+      "podminky": { "dokoncenPred": 2013 }, "platnostOd": "2026-06-24", "platnostDo": null,
+      "zdroj": "Závazné pokyny NZÚ Light", "odkaz": "https://novazelenausporam.cz/dokument/5113", "verzeDokumentu": "verze 2", "poznamka": ""
+    },
+    {
+      "kod": "L-ZAT-NEVYTAP", "opatreni": "podlaha-sklep", "program": "NZU-LIGHT", "kategorie": "zatepleni",
+      "nazev": "Zateplení podlahy nad nevytápěným prostorem", "typVypoctu": "jednotkova", "jednotka": "m2",
+      "jednotkovaPodpora": 750, "maximum": null, "minimum": null, "bonus": null,
+      "kombinace": ["Součet zateplení nejvýše 250 000 Kč"], "omezeni": ["Dům dokončený před 1. 7. 2013"],
+      "podminky": { "dokoncenPred": 2013 }, "platnostOd": "2026-06-24", "platnostDo": null,
+      "zdroj": "Závazné pokyny NZÚ Light", "odkaz": "https://novazelenausporam.cz/dokument/5113", "verzeDokumentu": "verze 2", "poznamka": ""
+    },
+    {
+      "kod": "L-ZAT-ZEMINA", "opatreni": "podlaha-zemina", "program": "NZU-LIGHT", "kategorie": "zatepleni",
+      "nazev": "Zateplení konstrukce k zemině", "typVypoctu": "jednotkova", "jednotka": "m2",
+      "jednotkovaPodpora": 2000, "maximum": null, "minimum": null, "bonus": null,
+      "kombinace": ["Součet zateplení nejvýše 250 000 Kč"], "omezeni": ["Dům dokončený před 1. 7. 2013"],
+      "podminky": { "dokoncenPred": 2013 }, "platnostOd": "2026-06-24", "platnostDo": null,
+      "zdroj": "Závazné pokyny NZÚ Light", "odkaz": "https://novazelenausporam.cz/dokument/5113", "verzeDokumentu": "verze 2", "poznamka": ""
+    },
+    {
+      "kod": "L-ZAT-PODLAHA-VENK", "opatreni": "podlaha-venk", "program": "NZU-LIGHT", "kategorie": "zatepleni",
+      "nazev": "Zateplení podlahy nad venkovním prostorem", "typVypoctu": "jednotkova", "jednotka": "m2",
+      "jednotkovaPodpora": 2000, "maximum": null, "minimum": null, "bonus": null,
+      "kombinace": ["Součet zateplení nejvýše 250 000 Kč"], "omezeni": ["Dům dokončený před 1. 7. 2013"],
+      "podminky": { "dokoncenPred": 2013 }, "platnostOd": "2026-06-24", "platnostDo": null,
+      "zdroj": "Závazné pokyny NZÚ Light", "odkaz": "https://novazelenausporam.cz/dokument/5113", "verzeDokumentu": "verze 2", "poznamka": ""
+    },
+    {
+      "kod": "L-VYPLNE", "opatreni": "okna", "program": "NZU-LIGHT", "kategorie": "zatepleni",
+      "nazev": "Okna, dveře a další výplně otvorů", "typVypoctu": "jednotkova", "jednotka": "m2",
+      "jednotkovaPodpora": 8000, "maximum": null, "minimum": null, "bonus": null,
+      "kombinace": ["Součet zateplení nejvýše 250 000 Kč"], "omezeni": ["Dům dokončený před 1. 7. 2013", "Stejné technické požadavky na Uw a UD jako v úvěrové větvi"],
+      "podminky": { "dokoncenPred": 2013 }, "platnostOd": "2026-06-24", "platnostDo": null,
+      "zdroj": "Závazné pokyny NZÚ Light", "odkaz": "https://novazelenausporam.cz/dokument/5113", "verzeDokumentu": "verze 2", "poznamka": ""
+    },
+    {
+      "kod": "L-TC-VZ-VO", "opatreni": "tc-vzduch-voda", "program": "NZU-LIGHT", "kategorie": "zdroje",
+      "nazev": "Tepelné čerpadlo vzduch-voda", "typVypoctu": "pausal", "jednotka": "ks",
+      "jednotkovaPodpora": null, "maximum": 150000, "minimum": null, "bonus": null,
+      "kombinace": ["Zdroje celkem nejvýše 150 000 Kč"], "omezeni": ["Dům dokončený před 1. 1. 2023"],
+      "podminky": { "dokoncenPred": 2023 }, "platnostOd": "2026-06-24", "platnostDo": null,
+      "zdroj": "Závazné pokyny NZÚ Light", "odkaz": "https://novazelenausporam.cz/dokument/5113", "verzeDokumentu": "verze 2", "poznamka": ""
+    },
+    {
+      "kod": "L-TC-ZEME", "opatreni": "tc-zeme-voda", "program": "NZU-LIGHT", "kategorie": "zdroje",
+      "nazev": "Tepelné čerpadlo země-voda, voda-voda", "typVypoctu": "pausal", "jednotka": "ks",
+      "jednotkovaPodpora": null, "maximum": 150000, "minimum": null, "bonus": null,
+      "kombinace": ["Zdroje celkem nejvýše 150 000 Kč"], "omezeni": ["Dům dokončený před 1. 1. 2023"],
+      "podminky": { "dokoncenPred": 2023 }, "platnostOd": "2026-06-24", "platnostDo": null,
+      "zdroj": "Závazné pokyny NZÚ Light", "odkaz": "https://novazelenausporam.cz/dokument/5113", "verzeDokumentu": "verze 2", "poznamka": ""
+    },
+    {
+      "kod": "L-TC-VZ-VZ", "opatreni": "tc-vzduch-vzduch", "program": "NZU-LIGHT", "kategorie": "zdroje",
+      "nazev": "Tepelné čerpadlo vzduch-vzduch", "typVypoctu": "pausal", "jednotka": "ks",
+      "jednotkovaPodpora": null, "maximum": 100000, "minimum": null, "bonus": null,
+      "kombinace": ["Zdroje celkem nejvýše 150 000 Kč"], "omezeni": ["Dům dokončený před 1. 1. 2023"],
+      "podminky": { "dokoncenPred": 2023 }, "platnostOd": "2026-06-24", "platnostDo": null,
+      "zdroj": "Závazné pokyny NZÚ Light", "odkaz": "https://novazelenausporam.cz/dokument/5113", "verzeDokumentu": "verze 2", "poznamka": ""
+    },
+    {
+      "kod": "L-TUV-TC", "opatreni": "tuv-tc", "program": "NZU-LIGHT", "kategorie": "zdroje",
+      "nazev": "Tepelné čerpadlo pro ohřev vody", "typVypoctu": "pausal", "jednotka": "ks",
+      "jednotkovaPodpora": null, "maximum": 70000, "minimum": null, "bonus": null,
+      "kombinace": ["Zdroje celkem nejvýše 150 000 Kč"], "omezeni": ["Dům dokončený před 1. 1. 2023"],
+      "podminky": { "dokoncenPred": 2023 }, "platnostOd": "2026-06-24", "platnostDo": null,
+      "zdroj": "Závazné pokyny NZÚ Light", "odkaz": "https://novazelenausporam.cz/dokument/5113", "verzeDokumentu": "verze 2", "poznamka": ""
+    },
+    {
+      "kod": "L-TUV-SOL", "opatreni": "tuv-solar", "program": "NZU-LIGHT", "kategorie": "zdroje",
+      "nazev": "Solární termický ohřev vody", "typVypoctu": "pausal", "jednotka": "ks",
+      "jednotkovaPodpora": null, "maximum": 70000, "minimum": null, "bonus": null,
+      "kombinace": ["Zdroje celkem nejvýše 150 000 Kč"], "omezeni": ["Dům dokončený před 1. 1. 2023", "Plocha kolektorů alespoň 1,8 m²"],
+      "podminky": { "dokoncenPred": 2023 }, "platnostOd": "2026-06-24", "platnostDo": null,
+      "zdroj": "Závazné pokyny NZÚ Light", "odkaz": "https://novazelenausporam.cz/dokument/5113", "verzeDokumentu": "verze 2", "poznamka": ""
+    },
+    {
+      "kod": "L-FVE-TUV", "opatreni": "fve", "program": "NZU-LIGHT", "kategorie": "zdroje",
+      "nazev": "Fotovoltaický systém s ohřevem vody", "typVypoctu": "pausal", "jednotka": "ks",
+      "jednotkovaPodpora": null, "maximum": 120000, "minimum": 3, "bonus": null,
+      "kombinace": ["Zdroje celkem nejvýše 150 000 Kč"], "omezeni": ["Dům dokončený před 1. 1. 2023", "Nejméně 3 kWp", "Musí ohřívat vodu, zásobník alespoň 200 l", "Ne ostrovní systém"],
+      "podminky": { "dokoncenPred": 2023, "minKwp": 3 }, "platnostOd": "2026-06-24", "platnostDo": null,
+      "zdroj": "Závazné pokyny NZÚ Light", "odkaz": "https://novazelenausporam.cz/dokument/5113", "verzeDokumentu": "verze 2", "poznamka": "Baterie, rekuperace a adaptační opatření nejsou ve větvi Light samostatně podporovány."
+    }
+  ]
+}
